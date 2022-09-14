@@ -1,0 +1,6 @@
+<h2><%= @post.title %></h2> <br>
+<p><%= @post.body %></p><br>
+<p>Author: <%= @post.author.name %></p><br>
+<p>Genre: <%= @post.genre.name %></p>
+<%= link_to 'DOWNLOAD PDF', post_path(::Post.find(params[:id]), format: :pdf) %><br>
+<%= wicked_pdf_image_tag_for_public( @barcode ) %>
