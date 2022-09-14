@@ -29,7 +29,6 @@ class PostsController < ApplicationController
 
   def barcode_output(post)
     barcode_string = post.barcode
-    binding.pry
     barcode = Barby::Code128B.new(barcode_string)
 
     # PNG OUTPUT
